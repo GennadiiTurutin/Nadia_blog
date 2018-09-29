@@ -1,60 +1,74 @@
 <style>
-
 .nav-link {
   color: #393A39;
 }
-
 .nav-link:hover {
   color: #8D928D;
 }
-
 </style>
-
 
 {% load static %}
 <!DOCTYPE html>
 <html>
 <head>
-
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-    <header class="site-header">
-      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top bg-light">
-        <div class="container">
-            <div class="d-md-flex d-block flex-row mx-md-auto mx-0">
-              <a class="nav-item nav-link" href="{% url 'blog-me' %}">/me</a>
-              <a class="nav-item nav-link" href="{% url 'blog-gallery' %}">/gallery</a>
-              <a class="nav-item nav-link" href="{% url 'blog-blog' %}">/blog</a>
-          </div>
+  <header class="site-header">
+    <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top bg-light" style="position: absolute;">
+      <a class="navbar-brand mx-md-auto mr-auto" href="/">
+        <img src="/media/logo.png" width="60" alt="logo">
+      </a>
+    </nav>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top bg-light" style="position: relative;">
+      <div class="container">
+        <div class="d-md-flex d-block flex-row mx-md-auto mx-0">
+          <a class="nav-item nav-link" href="{% url 'blog-art_design' %}">Art & Design</a>
+          <a class="nav-item nav-link" href="{% url 'blog-lifestyle' %}">Lifestyle</a>
+          <a class="nav-item nav-link" href="{% url 'blog-inspiration' %}">Inspiration</a>
+          <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
         </div>
-      </nav>
-    </header>
-    <main role="main" class="container">
-      <div class="row">
-      <div class="col-lg-10 col-md-10 mx-auto">
+      </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top bg-light" style="position: relative;">
+      <div class="container">
+        <div class="d-md-flex d-block flex-row mx-md-auto mx-0">
+            <!--Facebook -->
+          <p><a class="fb-ic"><i class="fa fa-facebook white-text mr-4"> </i></a>
+            <!--Linkedin -->
+             <a class="li-ic"><i class="fa fa-linkedin white-text mr-4"> </i></a>
+            <!--Instagram-->
+            <a class="ins-ic"><i class="fa fa-instagram white-text"> </i></a>
+          </p>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+
+  <div class="container">
+    <div class="row">
           {% block content %}{% endblock %}
       </div>
-      </div>
-    </main>
+  </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 {% include "blog/footer.html" %}
 {% block footer %}
 {% endblock %}
-   
-
 </html>

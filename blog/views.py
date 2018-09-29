@@ -10,20 +10,19 @@ from django.views.generic import (
 from .models import Post
 
 
-
-def blog(request):
+def art_design(request):
     context = {
     'posts': Post.objects.all()
     }
-    return render(request, 'blog/blog.html', context)
+    return render(request, 'blog/art_design.html', context)
 
 
 class PostListView(ListView):
     model = Post
-    template_name = 'blog/blog.html'   # <app>/<model>_<viewtype>.html
+    template_name = 'blog/art_design.html'   # <app>/<model>_<viewtype>.html
     context_object_name = 'posts'
     ordering = ['-date_posted']
-    paginate_by = 2
+    paginate_by = 10
 
 
 class PostDetailView(DetailView):
@@ -63,9 +62,15 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         return False
 
 
-def me(request):
-    return render(request, 'blog/me.html')
+def about(request):
+    return render(request, 'blog/about.html')
 
 
-def gallery(request):
-    return render(request, 'blog/gallery.html')
+def inspiration(request):
+    return render(request, 'blog/inspiration.html')
+
+def lifestyle(request):
+    context = {
+    'posts': Post.objects.all()
+    }
+    return render(request, 'blog/lifestyle.html', context)

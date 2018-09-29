@@ -2,25 +2,19 @@
 {% block content %}
   
     <!-- Page Content -->
-      
-    <div class="container">
-      <div class="row">
-        <!-- Blog Entries Column -->
-        <div class="col-md-13">
         {% for post in posts %}
           <!-- Blog Post -->
-          <div class="card mb-4">
+        <div class="col-md-6">
+          <div class="card mb-5">
             <img class="d-block w-100" src="{{ post.post_image.url }}" alt="Card image cap" >
             <div class="card-body">
               <h2 class="card-title">{{ post.title }}</h2>
               <p class="card-text">{{ post.subtitle }}</p>
-              <a href="#" class="btn btn-light">Read More &rarr;</a>
             </div>
-            <div class="card-footer text-muted">{{ post.date_posted|date:"F d, Y" }} by {{ post.author }}
-            </div>
+            <div class="card-footer text-muted">{{ post.date_posted|date:"F d, Y" }}</div>
           </div>
+        </div>
         {% endfor %}
-
         
       <!-- Pagination -->
       {% if is_paginated %}
@@ -46,3 +40,7 @@
     {% endif %}
     
 {% endblock content %}
+
+
+
+
