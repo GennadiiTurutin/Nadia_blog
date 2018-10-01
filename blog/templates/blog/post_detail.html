@@ -1,10 +1,19 @@
+<style>
+.container {
+    /* remember to set a width */
+    margin-right: auto;
+    margin-left: auto;
+}
+
+</style>
+
 {% extends "blog/base.html" %}
 {% block content %}
   <article class="media content-section">
     <img class="rounded-circle article-img" src="{{ object.author.profile.image.url }}">
     <div class="media-body">
       <div class="article-metadata">
-        <a class="mr-2" href="#">{{ object.author }}</a>
+        <a class="mr-2">{{ object.author }}</a>
         <small class="text-muted">{{ object.date_posted|date:"F d, Y" }}</small>
         {% if object.author == user %}
           <div>
@@ -13,8 +22,11 @@
           </div>
         {% endif %}
       </div>
-      <h2 class="article-title">{{ object.title }}</h2>
-      <p class="article-content">{{ object.content }}</p>
+      <div class="container">
+          <h2 class="article-title">{{ object.title }}</h2>
+          <h5 class="article-title">{{ object.subtitle }}</h5>
+          <p class="article-content">{{ object.content|safe }}</p>
+      </div>
     </div>
   </article>
 {% endblock content %}

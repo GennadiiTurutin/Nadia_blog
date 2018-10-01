@@ -1,6 +1,8 @@
 {% extends "blog/base.html" %}
 {% block content %}
   
+ <div class="container-fluid">
+    <div class="row">
     <!-- Page Content -->
         {% for post in posts %}
           <!-- Blog Post -->
@@ -15,6 +17,8 @@
           </div>
         </div>
         {% endfor %}
+    </div>
+  </div>
         
       <!-- Pagination -->
       {% if is_paginated %}

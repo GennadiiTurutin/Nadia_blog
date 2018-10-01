@@ -1,20 +1,25 @@
 {% extends "blog/base.html" %}
 {% block content %}
-  
+
+
+  <div class="container-fluid">
+    <div class="row">
     <!-- Page Content -->
         {% for post in posts %}
           <!-- Blog Post -->
         <div class="col-md-6">
           <div class="card mb-5">
-            <img class="d-block w-100" src="{{ post.post_image.url }}" alt="Card image cap" >
+            <img class="d-block w-100" src="{{ post.post_image.url }}" alt="Card image cap"  width="600" height="600">
             <div class="card-body">
-              <h2 class="card-title">{{ post.title }}</h2>
+              <h2><a class="card-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
               <p class="card-text">{{ post.subtitle }}</p>
             </div>
             <div class="card-footer text-muted">{{ post.date_posted|date:"F d, Y" }}</div>
           </div>
         </div>
         {% endfor %}
+    </div>
+  </div>
         
       <!-- Pagination -->
       {% if is_paginated %}
@@ -40,6 +45,8 @@
     {% endif %}
     
 {% endblock content %}
+
+
 
 
 

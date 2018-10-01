@@ -22,6 +22,7 @@
 
 <body>
   <header class="site-header">
+
     <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top bg-light" style="position: absolute;">
       <a class="navbar-brand mx-md-auto mr-auto" href="/">
         <img src="/media/logo.png" width="60" alt="logo">
@@ -35,6 +36,10 @@
           <a class="nav-item nav-link" href="{% url 'blog-lifestyle' %}">Lifestyle</a>
           <a class="nav-item nav-link" href="{% url 'blog-inspiration' %}">Inspiration</a>
           <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
+          <form class="navbar-nav ml-auto" method="GET" action="{% url 'search' %}">
+          <input name="q" value="{{request.GET.q}}" placeholder="search...">
+          <button class="btn btn-light" type="submit">Search</button>
+          </form>
         </div>
       </div>
     </nav>
@@ -47,19 +52,23 @@
             <!--Linkedin -->
              <a class="li-ic"><i class="fa fa-linkedin white-text mr-4"> </i></a>
             <!--Instagram-->
-            <a class="ins-ic"><i class="fa fa-instagram white-text"> </i></a>
+            <a class="ins-ic"><i class="fa fa-instagram white-text mr-4"> </i></a>
+            <!--Pinterest-->
+            <a><i class="fa fa-pinterest white-text mr-4"> </i></a>
+            
           </p>
         </div>
       </div>
+      
+  </div>
+
     </nav>
 
+         
+  
   </header>
 
-  <div class="container">
-    <div class="row">
           {% block content %}{% endblock %}
-      </div>
-  </div>
 
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

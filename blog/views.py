@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.db.models import Q
 from django.views.generic import (
     ListView, 
     DetailView, 
@@ -74,3 +75,15 @@ def lifestyle(request):
     'posts': Post.objects.all()
     }
     return render(request, 'blog/lifestyle.html', context)
+
+def search(request):
+    query = request.GET.get('q')
+    results = Post.objects.filter(Q(title__icontains=query) | 
+        Q(subtitle__icontains=query) | 
+        Q(content__icontains=query))
+
+    context = {
+    'posts': results
+    }
+    return render(request, 'blog/art_design.html', context)
+
