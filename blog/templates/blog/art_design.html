@@ -1,3 +1,4 @@
+
 {% extends "blog/base.html" %}
 {% block content %}
 
@@ -8,11 +9,13 @@
         {% for post in posts %}
           <!-- Blog Post -->
         <div class="col-md-6">
-          <div class="card mb-5">
-            <img class="d-block w-100" src="{{ post.post_image.url }}" alt="Card image cap"  width="600" height="600">
+          <div class="card mb-5"  >
+            <div style="overflow: hidden; height:500px;">
+            <img class="d-block w-100" src="{{ post.post_image.url }}" alt="Card image cap">
+            </div>
             <div class="card-body">
-              <h2><a class="card-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
-              <p class="card-text">{{ post.subtitle }}</p>
+            <h2><a class="card-title" href="{% url 'post-detail' post.id %}">{{ post.title|safe }}</a></h2>
+            <p class="card-text">{{ post.subtitle|safe }}</p>
             </div>
             <div class="card-footer text-muted">{{ post.date_posted|date:"F d, Y" }}</div>
           </div>

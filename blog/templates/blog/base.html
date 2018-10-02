@@ -36,10 +36,6 @@
           <a class="nav-item nav-link" href="{% url 'blog-lifestyle' %}">Lifestyle</a>
           <a class="nav-item nav-link" href="{% url 'blog-inspiration' %}">Inspiration</a>
           <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
-          <form class="navbar-nav ml-auto" method="GET" action="{% url 'search' %}">
-          <input name="q" value="{{request.GET.q}}" placeholder="search...">
-          <button class="btn btn-light" type="submit">Search</button>
-          </form>
         </div>
       </div>
     </nav>
@@ -80,4 +76,5 @@
 {% include "blog/footer.html" %}
 {% block footer %}
 {% endblock %}
+
 </html>

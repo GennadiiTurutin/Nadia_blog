@@ -1,11 +1,31 @@
+
+
 <!-- Footer -->
-<footer class="page-footer font-small blue-grey lighten-5">
+<footer>
 
-    <!-- Copyright -->
-    <div class="footer-copyright text-center text-black-50 py-3">
-      <p>New York, NY</p>
-      <p>nadiakoch@gmail.com</p>
-      <p>+ 01 999 00 88</p>
+   <div class="container">
+    <div class="d-md-flex d-block flex-row mx-md-auto mx-0">
+     <button onclick="topFunction()" class="btn btn-light btn-lg  btn-outline-dark" id="myBtn" title="Go to top"><span class="arrow">↑</span>Back to Top</button>
     </div>
+</div>
 
-  </footer>
+</footer>
+
+ <script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+</script>

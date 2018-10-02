@@ -1,5 +1,5 @@
 <style>
-.container {
+p.img {
     /* remember to set a width */
     margin-right: auto;
     margin-left: auto;
@@ -23,8 +23,8 @@
         {% endif %}
       </div>
       <div class="container">
-          <h2 class="article-title">{{ object.title }}</h2>
-          <h5 class="article-title">{{ object.subtitle }}</h5>
+          <h2 class="article-title" style="margin:50px 0px">{{ object.title|safe }}</h2>
+          <h5 class="article-title">{{ object.subtitle|safe }}</h5>
           <p class="article-content">{{ object.content|safe }}</p>
       </div>
     </div>
