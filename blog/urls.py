@@ -8,7 +8,6 @@ from .views import (
 	PostCreateView,
 	PostUpdateView,
 	PostDeleteView, 
-    search
 	)
 
 from . import views
@@ -16,7 +15,6 @@ from . import views
 urlpatterns = [
     path('', PostListView.as_view(), name='blog-art_design'),
     path('Inspiration/', views.inspiration, name='blog-inspiration'), 
-    path('Lifestyle/', views.lifestyle, name='blog-lifestyle'),
     path('About/', views.about, name='blog-about'),
     path('post/<int:pk>/', PostDetailView.as_view(), name='post-detail'),
     path('post/new/', PostCreateView.as_view(), name='post-create'),

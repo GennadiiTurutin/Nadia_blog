@@ -1,9 +1,23 @@
+<style>
+.container {
+  display: flex;
+  justify-content: center;
+  display: table-cell;
+  vertical-align: middle
+
+}
+
+.container img { 
+  width: 100%;
+}
+
+</style>
 
 {% extends "blog/base.html" %}
 {% block content %}
 
 
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
     <!-- Page Content -->
         {% for post in posts %}
@@ -11,11 +25,11 @@
         <div class="col-md-6">
           <div class="card mb-5"  >
             <div style="overflow: hidden; height:500px;">
-            <img class="d-block w-100" src="{{ post.post_image.url }}" alt="Card image cap">
+            <img src="{{ post.post_image.url }}" alt="Card image cap">
             </div>
             <div class="card-body">
-            <h2><a class="card-title" href="{% url 'post-detail' post.id %}">{{ post.title|safe }}</a></h2>
-            <p class="card-text">{{ post.subtitle|safe }}</p>
+            <center><h2><a class="card-title" href="{% url 'post-detail' post.id %}">{{ post.title|safe }}</a></h2></center>
+            <center><p class="card-text">{{ post.subtitle|safe }}</p></center>
             </div>
             <div class="card-footer text-muted">{{ post.date_posted|date:"F d, Y" }}</div>
           </div>

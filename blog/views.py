@@ -69,9 +69,4 @@ def about(request):
 def inspiration(request):
     return render(request, 'blog/inspiration.html')
 
-def lifestyle(request):
-    context = {
-    'posts': Post.objects.all()
-    }
-    return render(request, 'blog/lifestyle.html', context)
 
