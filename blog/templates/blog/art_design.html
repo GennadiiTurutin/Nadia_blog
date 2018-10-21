@@ -1,45 +1,29 @@
-<style>
-.container {
-  display: flex;
-  justify-content: center;
-  display: table-cell;
-  vertical-align: middle
-}
-
-.container img { 
-  width: 100%;
-}
-
-a.post-title {
-  color: #393A39;
-}
-
-a.post-title:hover {
-  color: #8D928D;
-}
-
-</style>
-
 {% extends "blog/base.html" %}
 {% block content %}
 
 
-  <div class="container">
+  <div class="container" style="margin-top: 3%">
     <div class="row">
     <!-- Page Content -->
         {% for post in posts %}
-          <!-- Blog Post -->
-        <div class="col-md-6">
-          <div class="card mb-5"  >
+        <!-- Blog Post -->
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="card mb-5">
             <a class="post-title" href="{% url 'post-detail' post.id %}" style="text-decoration:none">
+
             <div style="overflow: hidden; height:500px;">
-            <img src="{{ post.post_image.url }}" alt="Card image cap">
+                <img src="{{ post.post_image.url }}" alt="Card image cap">
             </div>
+
             <div class="card-body">
-            <center><h2>{{ post.title|safe }}</h2></center>
-            <center><p class="card-text">{{ post.subtitle|safe }}</p></center>
+                <center><h2>{{ post.title|safe }}</h2></center>
+                <center><p class="card-text">{{ post.subtitle|safe }}</p></center>
             </div>
-            <div class="card-footer text-muted">{{ post.date_posted|date:"F d, Y" }}</div>
+
+            <div class="card-footer text-muted">
+                {{ post.date_posted|date:"F d, Y" }}
+            </div>
+
             </a>
           </div>
         </div>
