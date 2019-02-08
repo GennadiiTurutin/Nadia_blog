@@ -42,7 +42,7 @@ nav {
 
 #socIcons {
     transition: 0.5s; /* Transition effect when sliding down (and up) */
-    margin-bottom: 1%;
+    margin-bottom: 0.3%;
 }
 
 .container img { 
@@ -100,3 +100,4 @@ a.post-title {
 a.post-title:hover {
   color: #8D928D;
 }
+
