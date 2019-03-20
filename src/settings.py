@@ -25,7 +25,7 @@ SECRET_KEY = '2sbq-5tpc59=6^6c*_%%7_oxug8b51417$m=oc_liu$4=_vz0_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.nadiakoch.com']
+ALLOWED_HOSTS = ['www.nadiakoch.com',  '127.0.0.1']
 
 
 # Application definition
@@ -55,7 +55,7 @@ TEMPLATES = [
     {
     
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/Users/Home/Desktop/github/nadiakoch.com/src/templates/'],
+        'DIRS': [os.path.join(BASE_DIR, 'src/templates/')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
