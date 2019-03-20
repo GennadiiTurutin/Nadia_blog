@@ -1,2 +1,2 @@
-# Nadia_blog
-A blog for the inspiring Interior Designer based on Django
+# Nadia
+Aan app for the inspiring Interior Designer based on Django
