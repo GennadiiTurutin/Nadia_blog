@@ -735,6 +735,12 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   color: #D2E3Df;
 }
 
+.pinterest {
+    position: sticky;
+    display: flex; 
+    justify-content: center; 
+    opacity: 0.8;
+}
 
 .parallax { 
   /* The image used */
@@ -750,11 +756,12 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   background-size: cover;
 }
 
+
 /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
 @media only screen and (max-device-width: 1366px) {
   .parallax {
-    background-attachment: scroll;
-  }
+    display: none;
+ }
 }
 
 .btn {
@@ -771,10 +778,4 @@ hr.line {
   border-radius: 0px;
 }
 
-.pinterest {
-    position: sticky;
-    display: flex; 
-    justify-content: center; 
-    opacity: 0.8;
-}
 
