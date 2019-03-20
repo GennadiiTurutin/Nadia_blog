@@ -25,7 +25,7 @@ SECRET_KEY = '2sbq-5tpc59=6^6c*_%%7_oxug8b51417$m=oc_liu$4=_vz0_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.nadiakoch.com']
 
 
 # Application definition
