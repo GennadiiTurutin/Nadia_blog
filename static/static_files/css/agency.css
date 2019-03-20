@@ -736,16 +736,12 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 }
 
 
-body, html {
-  height: 100%;
-}
-
 .parallax { 
   /* The image used */
   background-image: url("../img/collage.jpg");
 
   /* Full height */
-  height: 40%; 
+  height: 300px; 
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
