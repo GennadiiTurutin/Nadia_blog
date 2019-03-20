@@ -749,6 +749,12 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   background-size: cover;
 }
 
+@media only screen and (max-width:749px) {
+  .parallax {
+    background-attachment: inherit;
+  }
+}
+
 .btn {
   color: #D2E3Df;
 }
@@ -769,3 +775,4 @@ hr.line {
     justify-content: center; 
     opacity: 0.8;
 }
+
