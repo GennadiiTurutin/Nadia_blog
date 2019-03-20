@@ -735,12 +735,17 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   color: #D2E3Df;
 }
 
+
+body, html {
+  height: 100%;
+}
+
 .parallax { 
   /* The image used */
   background-image: url("../img/collage.jpg");
 
-  /* Set a specific height */
-  height: 500px; 
+  /* Full height */
+  height: 40%; 
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -749,9 +754,10 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   background-size: cover;
 }
 
-@media only screen and (max-width:749px) {
+/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
   .parallax {
-    background-attachment: inherit;
+    background-attachment: scroll;
   }
 }
 
