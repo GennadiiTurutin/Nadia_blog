@@ -110,7 +110,7 @@ img::-moz-selection {
   text-transform: uppercase;
   color: white;
   border: 0;
-  background-color: #9ca8d8;
+  background-color: #C2C3C2;
   font-family: 'Cinzel', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
@@ -754,7 +754,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 }
 
 .caption_center  img {
-    width: 300px;
+    width: 50px;
   }
 
 /* Large rounded green border */
