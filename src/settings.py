@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '2sbq-5tpc59=6^6c*_%%7_oxug8b51417$m=oc_liu$4=_vz0_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['www.nadiakoch.com',  '127.0.0.1']
 
